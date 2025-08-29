@@ -1,0 +1,15 @@
+body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f4f6f8; color:#111; margin:0;}
+.topbar { background:white; padding:12px 20px; display:flex; justify-content:space-between; align-items:center; box-shadow:0 1px 4px rgba(0,0,0,0.06);}
+.container{ padding:20px; max-width:1100px; margin:16px auto;}
+.card{ background:white; padding:12px; margin-bottom:12px; border-radius:10px; box-shadow:0 1px 4px rgba(0,0,0,0.04);}
+.center-card{ max-width:420px; margin:60px auto; background:white; padding:18px; border-radius:12px; box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+.form{ display:flex; flex-direction:column; gap:8px;}
+.form input{ padding:8px; }
+.err{ color:#c00; margin-top:8px;}
+.table{ width:100%; border-collapse:collapse;}
+.table th, .table td{ text-align:left; padding:8px; border-bottom:1px solid #eee;}
+.grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; }
+.grid-two{ display:grid; grid-template-columns: 1fr 380px; gap:12px; }
+.grid-products{ display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; }
+.product-card{ border:1px solid #eee; padding:8px; border-radius:8px; background:#fafafa;}
+.cart-item{ border:1px solid #eee; padding:8px; margin-bottom:8px; border-radius:8px; }

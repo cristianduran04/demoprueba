@@ -1,0 +1,90 @@
+/* src/Produccion.css */
+.produccion-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 18px;
+  background: #f4f6f9;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #1f2937;
+}
+
+/* header */
+.prod-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
+.prod-header h2 { margin:0; font-size:20px; color:#0f172a; }
+.muted { color: #6b7280; font-size:0.95rem; }
+
+/* botones acciones header */
+.prod-actions button {
+  margin-left:8px; padding:8px 12px; border-radius:8px; border:none; background:#1e40af; color:#fff; cursor:pointer;
+}
+.prod-actions button:hover { opacity:0.95; }
+
+/* tarjetas */
+.card { background:#fff; border-radius:12px; padding:14px; box-shadow: 0 6px 18px rgba(8,27,54,0.06); }
+
+/* wizard */
+.wizard-steps { display:flex; flex-direction:column; gap:12px; }
+.step { display:none; padding:8px 0; }
+.step.active { display:block; }
+.step label { display:block; font-weight:600; margin-bottom:6px; }
+.step select, .step input { width:100%; padding:8px; border-radius:8px; border:1px solid #d1d5db; }
+.hint { margin-top:6px; color:#6b7280; font-size:0.9rem; }
+.wizard-nav { margin-top:10px; display:flex; gap:8px; }
+.wizard-nav button { padding:8px 12px; border-radius:8px; border:none; background:#0f172a; color:#fff; cursor:pointer; }
+
+/* receta builder */
+.rec-row { display:flex; gap:8px; margin-bottom:8px; }
+.rec-row select, .rec-row input { flex:1; padding:8px; border-radius:8px; border:1px solid #e5e7eb; }
+.receta-actions { margin-top:8px; display:flex; gap:8px; }
+.receta-actions button { padding:8px 10px; border-radius:8px; }
+
+/* tabla OP */
+.table-header { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; }
+.table-header input { padding:8px; border-radius:8px; border:1px solid #e5e7eb; }
+
+.op-table { width:100%; border-collapse:collapse; font-size:0.95rem; }
+.op-table thead th { text-align:left; padding:10px; border-bottom:1px solid #e6eef8; background:#fbfdff; color:#0f172a; font-weight:700; }
+.op-table tbody td { padding:10px; border-bottom:1px solid #f1f5f9; vertical-align:middle; }
+.actions { display:flex; gap:8px; }
+
+/* badges estados */
+.badge { padding:6px 10px; border-radius:999px; font-weight:700; font-size:0.85rem; display:inline-block; }
+.estado-pendiente { background:#fff7ed; color:#92400e; border:1px solid #fde3c4; }
+.estado-completada { background:#ecfdf5; color:#087f5b; border:1px solid #c6f6e8; }
+.estado-cuarentena { background:#fff1f2; color:#9b2c2c; border:1px solid #fbd2d7; }
+
+/* botones */
+button.btn-primary { background:#0f172a; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+button.btn-warn { background:#d97706; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer; }
+button:disabled { opacity:0.6; cursor:not-allowed; }
+
+/* detalle QC */
+.qc-card .qc-header { display:flex; justify-content:space-between; align-items:center; }
+.detalle-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:10px; margin-top:8px; }
+.detalle-grid h4 { margin:8px 0 6px; }
+.qc-textarea { width:100%; min-height:100px; padding:10px; border-radius:8px; border:1px solid #e5e7eb; resize:vertical; }
+.qc-actions { margin-top:8px; display:flex; gap:8px; }
+
+/* movimientos */
+.movimientos { max-height:220px; overflow:auto; }
+.movimientos table { width:100%; border-collapse:collapse; font-size:0.9rem; }
+.movimientos thead th { text-align:left; padding:8px; background:#fafafa; font-weight:700; }
+.movimientos tbody td { padding:8px; border-bottom:1px solid #f3f4f6; }
+
+/* advertencias */
+.warn { padding:8px; background:#fff8e1; border-radius:8px; color:#975a16; }
+
+/* responsive */
+@media (max-width: 900px) {
+  .detalle-grid { grid-template-columns: 1fr; }
+  .prod-actions { display:none; }
+}
+

@@ -1,0 +1,126 @@
+/* styles/Ventas.css */
+.ventas-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.8fr;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fb;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Paneles */
+.panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Catálogo */
+.catalogo {
+  overflow-y: auto;
+}
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+.product-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.product-info {
+  flex: 1;
+}
+.product-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.product-info p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #555;
+}
+.btn-agregar {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-agregar:hover {
+  background: #115293;
+}
+
+/* Carrito */
+.carrito {
+  overflow-y: auto;
+}
+.carrito-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+.total {
+  margin-top: auto;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+  color: #1976d2;
+}
+.btn-vaciar {
+  margin-top: 10px;
+  background: #f44336;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.btn-vaciar:hover {
+  background: #d32f2f;
+}
+
+/* Datos venta */
+.datos-venta label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.datos-venta input, 
+.datos-venta select, 
+.datos-venta textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.btn-finalizar {
+  margin-top: auto;
+  background: #43a047;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-finalizar:hover {
+  background: #2e7d32;
+}
