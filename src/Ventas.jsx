@@ -1,3 +1,4 @@
+// src/Ventas.jsx
 import { useState, useEffect } from "react";
 import { collection, getDocs, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase";
@@ -9,11 +10,12 @@ export default function Ventas() {
   const [cliente, setCliente] = useState("");
   const [metodoPago, setMetodoPago] = useState("efectivo");
 
-  // cargar productos
+  // cargar productos filtrando solo PT
   useEffect(() => {
     const fetchProductos = async () => {
       const querySnapshot = await getDocs(collection(db, "productos"));
-      setProductos(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+      const productosData = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setProductos(productosData.filter(p => p.tipo === "PT")); // 🔹 Solo PT
     };
     fetchProductos();
   }, []);
@@ -58,17 +60,21 @@ export default function Ventas() {
       {/* Panel catálogo */}
       <div className="panel catalogo">
         <h2>Catálogo</h2>
-        {productos.map((p) => (
-          <div key={p.id} className="product-card">
-            <div className="product-info">
-              <h4>{p.nombre}</h4>
-              <p>${p.precio}</p>
+        {productos.length === 0 ? (
+          <p>No hay productos terminados registrados</p>
+        ) : (
+          productos.map((p) => (
+            <div key={p.id} className="product-card">
+              <div className="product-info">
+                <h4>{p.nombre}</h4>
+                <p>${p.precio}</p>
+              </div>
+              <button className="btn-agregar" onClick={() => agregarAlCarrito(p)}>
+                Agregar
+              </button>
             </div>
-            <button className="btn-agregar" onClick={() => agregarAlCarrito(p)}>
-              Agregar
-            </button>
-          </div>
-        ))}
+          ))
+        )}
       </div>
 
       {/* Panel carrito */}

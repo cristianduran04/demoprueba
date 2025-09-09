@@ -40,3 +40,612 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/* === Layout General Producción === */
+.produccion-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+/* === Encabezado === */
+.produccion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.produccion-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.produccion-header .btn-nueva-op {
+  padding: 10px 18px;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.produccion-header .btn-nueva-op:hover {
+  background: #004999;
+}
+
+/* === Tabla de Órdenes === */
+.ordenes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.ordenes-table th, 
+.ordenes-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.ordenes-table th {
+  background: #f5f6fa;
+  color: #34495e;
+  font-weight: 600;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.ordenes-table tr {
+  border-bottom: 1px solid #eaeaea;
+  transition: background 0.2s;
+}
+
+.ordenes-table tr:hover {
+  background: #f9fcff;
+}
+
+.ordenes-table td {
+  color: #555;
+}
+
+/* Estado */
+.estado-pendiente {
+  color: #e67e22;
+  font-weight: 600;
+}
+.estado-completada {
+  color: #27ae60;
+  font-weight: 600;
+}
+.estado-cancelada {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* === Botones de Acción === */
+.btn-accion {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: all 0.25s;
+}
+
+.btn-completar {
+  background: #27ae60;
+  color: #fff;
+}
+.btn-completar:hover {
+  background: #1e8449;
+}
+
+.btn-cancelar {
+  background: #e74c3c;
+  color: #fff;
+}
+.btn-cancelar:hover {
+  background: #c0392b;
+}
+
+.btn-detalle {
+  background: #3498db;
+  color: #fff;
+}
+.btn-detalle:hover {
+  background: #217dbb;
+}
+
+/* === Detalle de Insumos === */
+.insumos-lista {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fb;
+  border-radius: 8px;
+}
+
+.insumos-lista h4 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.insumos-lista ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insumos-lista li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #dfe6e9;
+  color: #555;
+}
+.insumos-lista li:last-child {
+  border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+/* === Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: #f5f7fa;
+  color: #2c3e50;
+}
+
+/* === Layout Principal === */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* === Sidebar === */
+.sidebar {
+  width: 240px;
+  background: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+}
+
+.sidebar h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.sidebar nav {
+  flex: 1;
+}
+
+.sidebar nav ul {
+  list-style: none;
+}
+
+.sidebar nav li {
+  margin: 10px 0;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 0.95rem;
+  transition: background 0.3s, padding-left 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #34495e;
+  padding-left: 25px;
+}
+
+.sidebar nav a i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* === Contenido Principal === */
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.main-content h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+/* === Tablas === */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.table th, .table td {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.table th {
+  background: #f0f2f5;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.table tr {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.table tr:hover {
+  background: #f9fbff;
+}
+
+/* === Botones === */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s;
+  margin: 2px;
+}
+
+.btn-primary {
+  background: #0066cc;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #004999;
+}
+
+.btn-success {
+  background: #27ae60;
+  color: #fff;
+}
+.btn-success:hover {
+  background: #1e8449;
+}
+
+.btn-danger {
+  background: #e74c3c;
+  color: #fff;
+}
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+.btn-secondary {
+  background: #7f8c8d;
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #636e72;
+}
+
+/* === Formularios === */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #34495e;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,102,204,0.15);
+}
+
+/* === Ventana Modal (Editar / Crear) === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  padding: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+
+
+
+/* Contenedor principal */
+.recetas-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.recetas-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #34495e;
+  text-align: center;
+}
+
+/* Formulario */
+.receta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.receta-form input,
+.receta-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.receta-form input:focus,
+.receta-form textarea:focus {
+  border: 1px solid #7a8dc0;
+}
+
+/* Botones */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  background: #7a8dc0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #5d6fa8;
+}
+
+/* Botones secundarios */
+.button.edit {
+  background: #27ae60;
+}
+
+.button.edit:hover {
+  background: #1e874b;
+}
+
+.button.delete {
+  background: #e74c3c;
+}
+
+.button.delete:hover {
+  background: #c0392b;
+}
+
+/* Lista de recetas */
+.recetas-list {
+  margin-top: 20px;
+}
+
+.receta-card {
+  background: #f8f9fb;
+  border: 1px solid #e1e4eb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.receta-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.receta-card p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Botones dentro de cada receta */
+.receta-card .button-group {
+  display: flex;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Estilo global */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* Menú lateral */
+nav {
+  background: #324a7d;
+  color: #fff;
+  height: 100vh;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 25px 15px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav h2 {
+  font-size: 22px;
+  margin: 0 0 25px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-bottom: 18px;
+}
+
+nav ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+
+nav ul li a:hover {
+  background: #465f9b;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* Botón salir */
+nav button {
+  padding: 10px;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.25s ease-in-out;
+}
+
+nav button:hover {
+  background: #c0392b;
+}
+
+/* Contenido principal */
+main {
+  margin-left: 200px;
+  padding: 30px;
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+main h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #324a7d;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -88,3 +88,55 @@ button:disabled { opacity:0.6; cursor:not-allowed; }
   .prod-actions { display:none; }
 }
 
+/* ----------------- Receta existente ----------------- */
+.receta-list {
+  margin-top: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.receta-list table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.receta-list thead th {
+  background: #f9fafb;
+  color: #374151;
+  font-weight: 600;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.receta-list tbody td {
+  padding: 8px;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+}
+
+.receta-list tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.receta-list tbody tr:hover {
+  background: #f1f5f9;
+}
+
+/* Botones dentro de receta existente */
+.receta-list button {
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #e5e7eb;
+  transition: all 0.2s ease;
+}
+.receta-list button:hover {
+  background: #d1d5db;
+}
+
+

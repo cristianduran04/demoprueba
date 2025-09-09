@@ -1,0 +1,112 @@
+/* Contenedor principal */
+.recetas-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.recetas-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #34495e;
+  text-align: center;
+}
+
+/* Formulario */
+.receta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.receta-form input,
+.receta-form textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #dcdde1;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.receta-form input:focus,
+.receta-form textarea:focus {
+  border: 1px solid #7a8dc0;
+}
+
+/* Botones */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  background: #7a8dc0;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: #5d6fa8;
+}
+
+/* Botones secundarios */
+.button.edit {
+  background: #27ae60;
+}
+
+.button.edit:hover {
+  background: #1e874b;
+}
+
+.button.delete {
+  background: #e74c3c;
+}
+
+.button.delete:hover {
+  background: #c0392b;
+}
+
+/* Lista de recetas */
+.recetas-list {
+  margin-top: 20px;
+}
+
+.receta-card {
+  background: #f8f9fb;
+  border: 1px solid #e1e4eb;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.receta-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.receta-card p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Botones dentro de cada receta */
+.receta-card .button-group {
+  display: flex;
+  gap: 10px;
+}
+

@@ -1,0 +1,80 @@
+/* src/pages/Login.css */
+.center-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #324a7d, #4f6fad);
+}
+
+.center-card h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+}
+
+.form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.form input:focus {
+  border-color: #324a7d;
+  box-shadow: 0 0 6px rgba(50, 74, 125, 0.3);
+}
+
+.form button {
+  background: #324a7d;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form button:hover {
+  background: #2a3d69;
+}
+
+.err {
+  color: #e74c3c;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -5px;
+}
+
+.center-card div {
+  margin-top: 15px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.center-card a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.center-card a:hover {
+  text-decoration: underline;
+}
